@@ -168,8 +168,58 @@ obj.display();
 
 ```
 
+## In Java
+- using classes same as c++
+```java
+class Node{
+    public int data;
+    public Node next;
+    public Node(){
+        data = 0;
+        next = null;
+    }
+    public Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+public class linkedList{
+    Node head;
+    public linkedList(){
+        head = null;
+    }
+    public void insertNode(int data){
+        Node newNode = new Node(data);
+        if(head==null){
+            head = newNode;
+        }
+        else{
+            Node temp = head;
+            while(temp.next!=null){
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        }
+    }
+    public void display(){
+        Node ptr = head;
+        while(ptr!=null){
+            System.out.println(ptr.data);
+            ptr = ptr.next;
+        }
 
-
+    }
+    public static void main(String[] args){
+        linkedList obj = new linkedList();
+        obj.insertNode(1);
+        obj.insertNode(2);
+        obj.insertNode(3);
+        obj.insertNode(4);
+        obj.display();
+       
+    }
+}
+```
 
 
 
