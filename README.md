@@ -221,7 +221,29 @@ public class linkedList{
 }
 ```
 
+## Graphs in C++
 
+```c++
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    int n = 5;
+    int m = 6;
+    int u,v;
+    vector<int> graph[n+1];
+    for(int i=0;i<m;i++){
+        cin>>u>>v;
+        graph[u].push_back(v);
+    }
+    for(int i=1;i<=n;i++){
+        for(auto x:graph[i]){
+            cout<<x<<" ";
+        }
+    }
+    return 0;
+}
+```
 
 
 
